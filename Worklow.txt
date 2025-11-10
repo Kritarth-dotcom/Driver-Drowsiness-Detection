@@ -1,0 +1,10 @@
+The webcam feed is processed frame-by-frame.
+Haar Cascade models detect the face and eyes.
+Based on the number of detected eyes:
+0 eyes → considered Sleeping
+1 eye → considered Drowsy
+2+ eyes → considered Active
+State counters track how long a condition persists to prevent false triggers.
+Alarms:
+  Sleeping: continuous beep until eyes reopen.
+  Drowsy: four short beeps.
